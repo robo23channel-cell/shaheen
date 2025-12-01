@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "الشاهين للشحن والتوصيل",
+    "slug": "Shaheen-V2",
+    "version": "1.0.5",
+    "orientation": "portrait",
+    "icon": "./assets/icon-Sh.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#C1DEFF"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "versionCode": 5,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon-Sh.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.ahmed.shaheen.v3",
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/image.png"
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3f6e5b64-72ec-4f39-8086-2d9dd09377b7"
+      }
+    },
+    "owner": "malek23cg"
+  }
+}

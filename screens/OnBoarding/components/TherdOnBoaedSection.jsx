@@ -1,0 +1,79 @@
+import { View, Text, StyleSheet, Dimensions } from 'react-native'
+import React from 'react'
+import StartIcon from '../../../assets/StartIcon.svg'
+import SliderIndicator3 from '../../../assets/SliderIndicator3.svg'
+import AppButton from '../../../components/AppBotton'
+import colors from '../../../config/colors'
+
+
+export default function TherdOnBoaedSection({next}) {
+  return (
+    <>
+        <StartIcon  style={styles.logo} />
+        <SliderIndicator3 style={styles.slider} />
+        <View style={styles.headerContainer}>
+        <Text  style={styles.header} >خدمات مخصصة لك</Text>
+        </View>
+       
+        <View style={styles.contentContainer}>
+        <Text  style={styles.content} >نقدم خدمات شحن مخصصة{'\n'}تلبي احتياجاتك الخاصة. اختر من{'\n'} بين مجموعة واسعة من الخيارات{'\n'} التي تناسب متطلباتك</Text>
+        </View>
+        <View style={styles.buttonContainer}>
+         <AppButton title='بـدأ' color={colors.blue} fun={next}  />
+        </View>
+    </>
+  )
+}
+
+
+
+
+const styles = StyleSheet.create({
+    background: {
+      flex: 1, 
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: '100%',
+      height: '100%',
+    },
+    logo: {
+      position: 'absolute', 
+      top: 154 - Dimensions.get('window').height * 0.02, 
+    },
+    buttonContainer: {
+      position: 'absolute',
+      top: 692 - Dimensions.get('window').height * 0.02, 
+      width: '100%',
+      alignItems: 'center',
+    },
+    header:{
+      fontFamily: "SomarSans-Bold",
+      color: '#00000',
+      fontSize: 24,
+      width: '100%'
+      // position: 'absolute',
+      // top: 466  - Dimensions.get('window').height * 0.02,
+      // left: 24
+    },
+    content:{
+      fontFamily: "SomarSans-Medium",
+      color: '#00000',
+      fontSize: 21,
+      textAlign: 'center'
+    },
+    headerContainer: {
+      position: 'absolute',
+      top: 466  - Dimensions.get('window').height * 0.02,
+    //  left: 24
+    },
+    contentContainer: {
+      position: 'absolute',
+      top: 519  - Dimensions.get('window').height * 0.02,
+    },
+    slider: {
+        position: 'absolute',
+        top: 442 - Dimensions.get('window').height * 0.02,
+        left: 141
+    }
+  });
+  
