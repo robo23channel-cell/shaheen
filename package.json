@@ -1,9 +1,6 @@
 {
   "name": "shaheen-v2",
   "version": "1.0.0",
-  "engines": {
-    "node": ">=20.19.4"
-  },
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
