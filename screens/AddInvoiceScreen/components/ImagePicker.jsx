@@ -1,19 +1,23 @@
-import { View, Text, TouchableOpacity } from 'react-native'
-import React from 'react'
-import InvoiceImgPickerSvg from '../../../assets/InvoiceImgPickerSvg.svg';
-import * as ImagePicker from 'expo-image-picker';
+import { View, Text, TouchableOpacity } from "react-native";
+import React from "react";
+import InvoiceImgPickerSvg from "../../../assets/InvoiceImgPickerSvg.svg";
+import * as ImagePicker from "expo-image-picker";
 
-
-
-export default function AppImagePicker({selectedImage, setSelectedImage}) {
-  
+export default function AppImagePicker({ selectedImage, setSelectedImage }) {
   const pickImage = async () => {
     // Request permission
-    const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-    if (status !== 'granted') {
+
+    const status = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      selectionLimit: 1,
+      allowsMultipleSelection: false,
+      quality: 1,
+    });
+
+    if (status !== "granted") {
       Alert.alert(
-        'Permission Denied',
-        'We need permission to access your photo library to upload an image.'
+        "Permission Denied",
+        "We need permission to access your photo library to upload an image."
       );
       return;
     }
@@ -31,8 +35,8 @@ export default function AppImagePicker({selectedImage, setSelectedImage}) {
   };
 
   return (
-    <TouchableOpacity onPress={pickImage}  style={{ alignSelf: 'center'}} >
-      <InvoiceImgPickerSvg/>
+    <TouchableOpacity onPress={pickImage} style={{ alignSelf: "center" }}>
+      <InvoiceImgPickerSvg />
     </TouchableOpacity>
-  )
+  );
 }

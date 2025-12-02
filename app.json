@@ -21,14 +21,13 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.ahmed.shaheen.v3",
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/image.png"
     },
-    "plugins": [
-      "expo-secure-store"
-    ],
+    "plugins": ["expo-secure-store"],
     "extra": {
       "eas": {
         "projectId": "3f6e5b64-72ec-4f39-8086-2d9dd09377b7"
