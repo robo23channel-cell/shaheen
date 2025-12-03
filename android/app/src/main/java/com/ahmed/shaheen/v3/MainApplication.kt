@@ -2,7 +2,7 @@ package com.ahmed.shaheen.v3
 
 import android.app.Application
 import android.content.res.Configuration
-
+import com.ahmed.shaheen.v3.BuildConfig
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactNativeHost
